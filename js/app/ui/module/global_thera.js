@@ -260,7 +260,7 @@ define([
                         render: {
                             display: (cellData, type, rowData, meta) => {
                                 if(cellData){
-                                    let wormholeData = BaseModule.Util.getObjVal(Init, `wormholes.${cellData}`);
+                                    let wormholeData = BaseModule.Util.getObjectByKeyValue(Init.wormholes, 'name', cellData);
                                     let security = BaseModule.Util.getObjVal(wormholeData, `security`);
                                     let typeNodes = FormElement.formatSignatureTypeSelectionData({text: `${cellData} - ${security}`}, undefined, {showWhSizeLabel: false});
                                     return [...typeNodes].reduce((acc, node) => {
