@@ -1987,7 +1987,7 @@ define([
             over: function(e){
                 let staticWormholeElement = $(this);
                 let wormholeName = staticWormholeElement.attr('data-name');
-                let wormholeData = Util.getObjVal(Init, 'wormholes.' + wormholeName);
+                let wormholeData = Util.getObjectByKeyValue(Init.wormholes, 'name', wormholeName)
                 if(wormholeData){
                     staticWormholeElement.addWormholeInfoTooltip(wormholeData, options);
                 }
