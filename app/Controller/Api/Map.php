@@ -227,7 +227,7 @@ class Map extends Controller\AccessController {
                     ($wormholeData = $typeModel->getWormholeData()) &&
                     mb_strlen((string)$wormholeData->name) === 4
                 ){
-                    $wormholesData[$wormholeData->name] = $wormholeData;
+                    $wormholesData[$wormholeData->typeId] = $wormholeData;
                 }
             }
             ksort($wormholesData);
