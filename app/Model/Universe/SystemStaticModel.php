@@ -58,7 +58,7 @@ class SystemStaticModel extends AbstractUniverseModel {
      * @return null|string
      */
     public function getData(){
-        return $this->typeId ? $this->typeId->getWormholeName() : null;
+        return $this->typeId ? $this->typeId->_id : null;
     }
 
     /**
