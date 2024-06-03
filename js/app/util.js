@@ -3591,6 +3591,21 @@ define([
     };
 
     /**
+     * get object by value in key
+     * @param obj
+     * @param key
+     * @param value
+     * @returns {*}
+     */
+    let getObjectByKeyValue = (obj, key, value) => {
+        for (let property in obj) {
+            if (obj[property][key] === value) {
+                return obj[property];
+            }
+        }
+    }
+
+    /**
      * get document path
      * -> www.pathfinder.com/pathfinder/ -> /pathfinder
      * @returns {string|string}
@@ -3796,6 +3811,7 @@ define([
         arrayToObject: arrayToObject,
         filterObjByKeys: filterObjByKeys,
         getObjVal: getObjVal,
+        getObjectByKeyValue: getObjectByKeyValue,
         redirect: redirect,
         logout: logout,
         setCookie: setCookie,
